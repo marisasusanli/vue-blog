@@ -44,7 +44,7 @@ npm install
 
 The starter comes with a Contentful set up command that imports the required content model and adds sample content to your space.
 
-The command asks you for a [Space ID](https://www.contentful.com/help/find-space-id/), [Content Management API Access Token](https://www.contentful.com/developers/docs/references/content-management-api/), and the [Conetnt Delivery API Access Token](https://www.contentful.com/developers/docs/references/content-delivery-api/).
+The command asks you for a [Space ID](https://www.contentful.com/help/find-space-id/), [Content Management API Access Token](https://www.contentful.com/developers/docs/references/content-management-api/), and the [Content Delivery API Access Token](https://www.contentful.com/developers/docs/references/content-delivery-api/).
 
 In your terminal, navigate in to the project directory. Run the following command to set up the content model.
 
