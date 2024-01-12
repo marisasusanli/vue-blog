@@ -1,0 +1,1895 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "plant",
+        "type": "ContentType",
+        "createdAt": "2023-11-13T18:30:22.617Z",
+        "updatedAt": "2023-11-15T15:43:58.050Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-11-15T15:43:58.050Z",
+        "firstPublishedAt": "2023-11-13T18:30:22.968Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "displayField": "commonName",
+      "name": "Plant",
+      "description": "",
+      "fields": [
+        {
+          "id": "commonName",
+          "name": "Common Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "scientificName",
+          "name": "Scientific Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "wateringSchedule",
+          "name": "Watering Schedule",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "lastWatered",
+          "name": "Last Watered",
+          "type": "Date",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "sunlight",
+          "name": "Sunlight",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "happiness",
+          "name": "Happiness",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "8kylzy6ms6jo",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2023-11-13T18:30:23.150Z",
+        "createdBy": {
+          "sys": {
+            "id": "1CDBzySYdM8I3Kvr3h6A0D",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-11-15T15:43:58.572Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1CDBzySYdM8I3Kvr3h6A0D",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "plant",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "commonName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "scientificName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "wateringSchedule",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "lastWatered",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "sunlight",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "happiness",
+          "settings": {
+            "trueLabel": "Happy",
+            "falseLabel": "Sad"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "26eIm7duprequPJfoaC9Lw",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:41.998Z",
+        "updatedAt": "2023-11-15T15:44:46.286Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2023-11-15T15:44:46.286Z",
+        "firstPublishedAt": "2023-11-13T18:30:43.753Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "Bird of Paradise"
+        },
+        "scientificName": {
+          "en-US": "Strelitzia"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3yUJpIDWwPCedO1R7OdK6f"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Weekly"
+        },
+        "lastWatered": {
+          "en-US": "2023-11-12"
+        },
+        "sunlight": {
+          "en-US": "Bright indirect to direct light"
+        },
+        "happiness": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "2CKfH7YZ8G7U2mg5BdWSHK",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:42.012Z",
+        "updatedAt": "2023-11-14T18:39:01.667Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 24,
+        "publishedAt": "2023-11-14T18:39:01.667Z",
+        "firstPublishedAt": "2023-11-13T18:30:44.150Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 25,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "Parlor Palm"
+        },
+        "scientificName": {
+          "en-US": "Chamaedorea elegans"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "KwkjhASRaAj1wyTNwKh5O"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Weekly"
+        },
+        "lastWatered": {
+          "en-US": "2023-08-02"
+        },
+        "sunlight": {
+          "en-US": "Medium to bright indirect light"
+        },
+        "happiness": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "1mDeIr7mcRLjVfddagETV7",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:42.013Z",
+        "updatedAt": "2024-01-12T15:46:49.465Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-01-12T15:46:49.465Z",
+        "firstPublishedAt": "2023-11-13T18:30:42.642Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "Fiddle Leaf Fig"
+        },
+        "scientificName": {
+          "en-US": "Ficus lyrata"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4GssZr19kIqKw0XlhHNBCl"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Weekly"
+        },
+        "lastWatered": {
+          "en-US": "2024-01-12"
+        },
+        "sunlight": {
+          "en-US": "Bright indirect light to full sun"
+        },
+        "happiness": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "7gBLtEZNZreCfPHoEBPujT",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:42.016Z",
+        "updatedAt": "2023-11-15T01:33:31.112Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 35,
+        "publishedAt": "2023-11-15T01:33:31.112Z",
+        "firstPublishedAt": "2023-11-13T18:30:43.299Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 36,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "ZZ Plant"
+        },
+        "scientificName": {
+          "en-US": "Zamioculcas zamiifolia"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "32psKZSYEqE3Q9LX72dJ7M"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Bi-Weekly"
+        },
+        "lastWatered": {
+          "en-US": "2023-11-13"
+        },
+        "sunlight": {
+          "en-US": "Medium to bright indirect light"
+        },
+        "happiness": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "3r8vjs6HCoIXj2aDAbLBeV",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:42.309Z",
+        "updatedAt": "2024-01-12T15:46:49.435Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2024-01-12T15:46:49.435Z",
+        "firstPublishedAt": "2023-11-13T18:30:44.570Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "Swiss Cheese Plant"
+        },
+        "scientificName": {
+          "en-US": "Monstera deliciosa "
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6W6fKTCVY4B8so4ZKyJOox"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Weekly"
+        },
+        "lastWatered": {
+          "en-US": "2024-01-12"
+        },
+        "sunlight": {
+          "en-US": "Bright indirect to medium light"
+        },
+        "happiness": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "2CCaFAO0cCteNj9ovAzo1D",
+        "type": "Entry",
+        "createdAt": "2023-11-13T18:30:42.310Z",
+        "updatedAt": "2024-01-12T15:46:49.393Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 29,
+        "publishedAt": "2024-01-12T15:46:49.393Z",
+        "firstPublishedAt": "2023-11-13T18:30:45.271Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 30,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "plant"
+          }
+        }
+      },
+      "fields": {
+        "commonName": {
+          "en-US": "Snake Plant"
+        },
+        "scientificName": {
+          "en-US": "Dracaena trifasciata"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3qHGZ52zrB8YKpFnuKsSZd"
+            }
+          }
+        },
+        "wateringSchedule": {
+          "en-US": "Monthly"
+        },
+        "lastWatered": {
+          "en-US": "2024-01-12"
+        },
+        "sunlight": {
+          "en-US": "Indirect Light"
+        },
+        "happiness": {
+          "en-US": false
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "32psKZSYEqE3Q9LX72dJ7M",
+        "type": "Asset",
+        "createdAt": "2023-11-13T18:30:23.893Z",
+        "updatedAt": "2023-11-14T15:18:25.021Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-11-14T15:18:25.021Z",
+        "firstPublishedAt": "2023-11-13T18:30:39.483Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Zamioculcas zamiifolia"
+        },
+        "description": {
+          "en-US": "Zamioculcas zamiifolia"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/32psKZSYEqE3Q9LX72dJ7M/9f67068a0d8c26f981ea1634fc68f60a/feey-cLaaxa4DSnc-unsplash.jpg",
+            "details": {
+              "size": 1494291,
+              "image": {
+                "width": 3762,
+                "height": 4703
+              }
+            },
+            "fileName": "feey-cLaaxa4DSnc-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "3qHGZ52zrB8YKpFnuKsSZd",
+        "type": "Asset",
+        "createdAt": "2023-11-14T15:31:08.283Z",
+        "updatedAt": "2023-11-14T15:31:29.431Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-11-14T15:31:29.431Z",
+        "firstPublishedAt": "2023-11-14T15:31:29.431Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Snake Plant"
+        },
+        "description": {
+          "en-US": "Snake plant"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/3qHGZ52zrB8YKpFnuKsSZd/64a58b006b155baf3b1b0f8851646840/parker-sturdivant--Lh6tVzDdMg-unsplash.jpg",
+            "details": {
+              "size": 1342463,
+              "image": {
+                "width": 2382,
+                "height": 3335
+              }
+            },
+            "fileName": "parker-sturdivant--Lh6tVzDdMg-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "6W6fKTCVY4B8so4ZKyJOox",
+        "type": "Asset",
+        "createdAt": "2023-11-14T15:47:57.277Z",
+        "updatedAt": "2023-11-14T15:48:49.771Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-11-14T15:48:49.771Z",
+        "firstPublishedAt": "2023-11-14T15:48:49.771Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Swiss Cheese Plant"
+        },
+        "description": {
+          "en-US": "Swiss Cheese Plant"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/6W6fKTCVY4B8so4ZKyJOox/6d958d8475da0f4b67daf10b3b00fa57/marc-blue-xnpm_Bpn5N8-unsplash.jpg",
+            "details": {
+              "size": 1563631,
+              "image": {
+                "width": 2832,
+                "height": 3447
+              }
+            },
+            "fileName": "marc-blue-xnpm_Bpn5N8-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "KwkjhASRaAj1wyTNwKh5O",
+        "type": "Asset",
+        "createdAt": "2023-11-14T18:38:41.196Z",
+        "updatedAt": "2023-11-14T18:38:57.074Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-11-14T18:38:57.074Z",
+        "firstPublishedAt": "2023-11-14T18:38:57.074Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Parlor Palm"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/KwkjhASRaAj1wyTNwKh5O/12cc83994f6055f2baae329c4c85efc6/natalie-kinnear-Uii3CSyuItI-unsplash.jpg",
+            "details": {
+              "size": 1549506,
+              "image": {
+                "width": 3840,
+                "height": 5760
+              }
+            },
+            "fileName": "natalie-kinnear-Uii3CSyuItI-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "3yUJpIDWwPCedO1R7OdK6f",
+        "type": "Asset",
+        "createdAt": "2023-11-15T01:16:39.656Z",
+        "updatedAt": "2023-11-15T01:17:02.571Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-11-15T01:17:02.571Z",
+        "firstPublishedAt": "2023-11-15T01:17:02.571Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Bird of Paradise"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/3yUJpIDWwPCedO1R7OdK6f/ea25b7430c64e67dc9c24162e0975fd0/dennis-cortes-zEVVzqfX-Uw-unsplash.jpg",
+            "details": {
+              "size": 3051375,
+              "image": {
+                "width": 3024,
+                "height": 4032
+              }
+            },
+            "fileName": "dennis-cortes-zEVVzqfX-Uw-unsplash.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "id": "4GssZr19kIqKw0XlhHNBCl",
+        "type": "Asset",
+        "createdAt": "2023-11-15T15:48:54.818Z",
+        "updatedAt": "2023-11-15T15:49:16.722Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-11-15T15:49:16.722Z",
+        "firstPublishedAt": "2023-11-15T15:49:16.722Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Fiddle Leaf Fig"
+        },
+        "description": {
+          "en-US": "Fiddle Leaf Fig"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/8kylzy6ms6jo/4GssZr19kIqKw0XlhHNBCl/233438230b5b614e7089bf78cdcaa145/fiddle-leaf-fig.jpg",
+            "details": {
+              "size": 838516,
+              "image": {
+                "width": 3195,
+                "height": 4792
+              }
+            },
+            "fileName": "fiddle-leaf-fig.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "2A4ZwOQZZT8sBxXqJI2Y3b",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "161a9a1b-fd54-448d-9769-9148518c51e4"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "createdAt": "2023-11-13T18:28:14Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedAt": "2023-11-13T18:28:14Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2AvQFrlUSusghDwk5cdV0F",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "createdAt": "2023-11-13T18:28:14Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedAt": "2023-11-13T18:28:14Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2AwuFfL5nb9jzpZdH9yZAV",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "createdAt": "2023-11-13T18:28:14Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedAt": "2023-11-13T18:28:14Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2AwVrTBwgaIWASJsQAVx7n",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "createdAt": "2023-11-13T18:28:14Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedAt": "2023-11-13T18:28:14Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "2AxrPW3pfJMZmxJIVzEuZT",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "8kylzy6ms6jo"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "createdAt": "2023-11-13T18:28:14Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1CDBzySYdM8I3Kvr3h6A0D"
+          }
+        },
+        "updatedAt": "2023-11-13T18:28:14Z"
+      }
+    }
+  ]
+}
