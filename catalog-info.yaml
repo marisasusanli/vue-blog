@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: starter-vue-tracker
+  description: A Contentful starter website built with Vue
+
+  annotations:
+    github.com/project-slug: contentful/starter-vue-tracker
+    contentful.com/service-tier: "unknown"
+
+
+  tags:
+    - sast-disabled
+    - tier-unknown
+spec:
+
+  type: template 
+  lifecycle: unknown  
+  system: unknown 
+  owner: group:team-devrel 
