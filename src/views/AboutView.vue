@@ -1,31 +1,106 @@
-<template>
-  <div class="about">
-    <main>
-      <h2>About My Plants</h2>
-      <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere imperdiet aliquet. Vestibulum feugiat eros purus, at porttitor tortor blandit eget. Nullam tortor massa, posuere a lectus ac, sagittis convallis neque. Curabitur ut magna elementum, placerat eros id, pellentesque magna. Donec magna lorem, lobortis sed accumsan sed, posuere at velit. In viverra augue eu ex iaculis mollis. Aenean vel pulvinar nisl. Mauris quis tortor eu neque gravida malesuada sit amet eget sem. Aliquam ligula dolor, varius id tincidunt at, posuere scelerisque augue. Etiam ipsum dui, rhoncus at odio et, blandit tempus metus.</p>
+<script setup>
+import { computed } from 'vue';
 
-        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam sit amet urna lectus. Donec accumsan vestibulum aliquam. Phasellus faucibus sapien vitae ante cursus eleifend. Etiam in eros elementum, fringilla augue vitae, hendrerit magna. Curabitur vitae dui risus. In tristique est nec maximus ultricies. Morbi luctus maximus odio, nec malesuada justo suscipit sit amet. Nullam sit amet velit leo.</p>
-      </section>
-    </main>
-  </div>
+const props = defineProps({
+  about: {
+    type: Array,
+    required: true
+  },
+});
+
+const aboutMeText = computed(() => {
+  const description = props.about[0]?.description?.split("history.");
+  return description[0] + "history." || '';
+});
+
+const aboutMeTextContinued = computed(() => {
+  const description = props.about[0]?.description?.split("history.");
+  return description[1] || '';
+});
+
+const getImgUrl = () => {
+  return props.about[0]?.photo.url;
+};
+
+</script>
+
+<template>
+  <main>
+    <section class="profile">
+      <div class="profile-pic">
+        <img :src="getImgUrl()" class="pic"/>
+      </div>
+      <div class="description">
+        <h2 class="header">I'm Marisa</h2>
+        <p>{{ aboutMeText }}</p>
+        <p class="text-continued">{{ aboutMeTextContinued }}</p>
+      </div>
+    </section>
+  </main>
 </template>
 
 <style scoped>
-
-.about {
-  background-color: white;
-  padding: 20px;
-  height: 100vh;
-}
-
-.about p {
-  margin: 10px 0;
-}
-
 main {
+  padding: 30px;
+  min-height: 100vh;
   max-width: 1280px;
   margin: auto;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 2em 0;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic {
+  max-width: 350px;
+}
+
+.description {
+  margin-top: -10px;
+  padding: 0px 20px;
+  max-width: 60%;
+}
+
+.header {
+  color: #7b6706;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: lowercase;
+}
+
+.text-continued {
+  margin-top: 15px;
+}
+
+@media (width <= 480px) {
+  .pic {
+    max-width: 70%;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    max-width: 95%;
+  }
+}
+
+@media (width <= 992px) {
+  .pic {
+    max-width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .description {
+    max-width: 95%;
+  }
 }
 
 </style>

@@ -1,26 +1,32 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import { ref, watchEffect } from 'vue'
+import { RouterLink, RouterView } from 'vue-router';
+import { ref, watchEffect } from 'vue';
 
-const plants = ref([])
+const about = ref([]);
+const blogs = ref([]);
 
 watchEffect(async () => {
-  const query = `{ 
-    plantCollection {
+  const query = `{
+    aboutMeCollection {
       items {
         sys {
           id
         }
-        commonName
-        scientificName
-        image {
+        description
+        photo {
           url
-          description
         }
-        wateringSchedule
-        lastWatered
-        sunlight
-        happiness
+      }
+    }
+    blogsCollection {
+      items {
+        sys {
+          id
+          firstPublishedAt
+        }
+        title
+        slug
+        description
       }
     }
   }`;
@@ -28,91 +34,96 @@ watchEffect(async () => {
   const fetchUrl = `https://graphql.contentful.com/content/v1/spaces/${import.meta.env.VITE_CONTENTFUL_SPACE_ID}`;
 
   const fetchOptions = {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ query })
-      };
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${import.meta.env.VITE_CONTENTFUL_ACCESS_TOKEN}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ query })
+  };
 
-    try {
-        const response = await fetch(fetchUrl, fetchOptions).then(response =>
-          response.json()
-        );
-        plants.value = response.data.plantCollection.items;
-      } catch (error) {
-        throw new Error("Could not receive the data from Contentful!");
-      }
-})
-
+  try {
+    const response = await fetch(fetchUrl, fetchOptions).then(response =>
+      response.json()
+    );
+    about.value = response.data?.aboutMeCollection?.items;
+    blogs.value = response.data?.blogsCollection?.items?.map((blog) => { return {...blog, readMore: false}});
+  } catch (error) {
+    throw new Error("Error retrieving data from Contentful");
+  }
+});
 
 </script>
 
 <template>
   <header>
     <div class="header-content">
-      <div>
-        <h1>House Plant Tracker</h1>
-        <p class="subtitle">Monitor the happiness of your house plants!</p>
-      </div>
       <nav>
         <RouterLink class="nav-link" to="/">Home</RouterLink>
         <RouterLink class="nav-link" to="/about">About</RouterLink>
+        <RouterLink class="nav-link" to="/blog">Blog</RouterLink>
       </nav>
     </div>
   </header>
 
-  <RouterView :plants="plants"/>
+  <RouterView :about="about" :blogs="blogs"/>
   <footer>
     <div class="footer-content">
-      <img alt="Contentful logo" class="logo" src="@/assets/logo.svg" width="50" height="125" />
-      <p>Created with <a href="https://www.contentful.com/" target="_blank">Contentful</a> and <a href="https://vuejs.org/" target="_blank">Vue.js</a>.</p>
+      <div> 
+        <a href="https://linkedin.com/in/marisa-susan-li" class="footer-link">
+          <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
+        </a> 
+        <a href="https://github.com/marisasusanli" class="footer-link">
+          <font-awesome-icon :icon="['fab', 'github']" size="2x" />
+        </a> 
+        <a href="mailto:marisa.susan.li@gmail.com" class="footer-link">
+          <font-awesome-icon :icon="['fas', 'envelope']" size="2x" />
+        </a> 
+      </div>
+      <p>© {{ new Date().getFullYear() }} Marisa Li </p>
     </div>
-    <div class="credit">Images from 
-      <a href="https://unsplash.com/@feeypflanzen?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">feey</a>, <a href="https://unsplash.com/@parkerdesignsss?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Parker Sturdivant</a>, <a href="https://unsplash.com/@nataliekinnear?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Natalie Kinnear</a>, <a href="https://unsplash.com/@cortes?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dennis Cortés</a>, <a href="https://unsplash.com/@marcblue?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Marc Blue</a>, and <a href="https://unsplash.com/@karaeads?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kara Eads</a> on <a href="https://unsplash.com/photos/green-plant-on-brown-woven-basket-2LlRY-bMmig?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>.</div>
   </footer>
 </template>
 
 <style scoped>
-
 header {
-  background-color: white;
   padding: 2rem;
 }
 
 .header-content {
   max-width: 1280px;
   margin: auto;
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.subtitle {
-  font-size: 21px;
+nav {
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .nav-link {
-  color: #2D4A2F;
+  color: #7b6706;
   text-decoration: none;
   padding: .5rem 1rem;
-  border: 1px solid #2D4A2F;
   margin: 1rem 1rem 1rem 0;
   display: inline-block;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .router-link-active {
-  background-color:  #2D4A2F;
-  color: white;
+  border: 1.5px solid #7b6706;
 }
 
 footer {
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-family: sans-serif;
-  padding: 20px;
-  background-image: url(/plant-background.jpg);
-  background-size: cover;
-  background-position: right;
+  padding: 1rem 1.5rem;
+  background-color: #7b6706;
+  position: relative;
+  width: 100%;
 }
 
 .footer-content {
@@ -127,13 +138,8 @@ footer {
   color: white;
 }
 
-.credit {
-  text-align: center;
-  font-size: 15px;
-}
-
-.credit a {
-  color: lightgray;
+.footer-link {
+  margin: 0px 10px;
 }
 
 @media screen and (min-width: 992px) {
