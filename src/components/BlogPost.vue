@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import markdownit from 'markdown-it';
 import moment from 'moment';
 
@@ -12,6 +12,13 @@ const props = defineProps({
 
 const readMore = ref(props.blog.readMore);
 
+const TEXT_LENGTH_TO_DISPLAY = 80;
+
+const hasLongText = computed(() => {
+  const description = props.blog?.description;
+  return description && description.split(" ")?.length > TEXT_LENGTH_TO_DISPLAY;
+});
+
 const transformDate = (isoDate) => {
   return moment(isoDate).format('MMMM Do, YYYY');
 };
@@ -22,7 +29,7 @@ const transformMarkdown = (markdown) => {
     breaks: true
   });
   const result = md.render(markdown);
-  return readMore.value ? result : result?.split(" ").slice(0, 80).join(" ");
+  return readMore.value ? result : result?.split(" ").slice(0, TEXT_LENGTH_TO_DISPLAY).join(" ");
 };
 
 </script>
@@ -33,7 +40,7 @@ const transformMarkdown = (markdown) => {
     <p class="blog-date">{{ transformDate(blog?.sys?.firstPublishedAt) }}</p>
     <div v-if="!readMore">
       <p class="blog-text" v-html=transformMarkdown(blog?.description)></p>
-      <span class="expand" @click="readMore = !readMore">
+      <span v-if="!readMore && hasLongText" class="expand" @click="readMore = !readMore">
         [...read more]
       </span>
     </div>
