@@ -10,12 +10,12 @@ const props = defineProps({
 
 const aboutMeText = computed(() => {
   const description = props.about[0]?.description?.split("history.");
-  return description[0] + "history." || '';
+  return description && description[0] + "history." || '';
 });
 
 const aboutMeTextContinued = computed(() => {
   const description = props.about[0]?.description?.split("history.");
-  return description[1] || '';
+  return description && description[1] || '';
 });
 
 const getImgUrl = () => {
