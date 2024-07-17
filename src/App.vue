@@ -69,16 +69,16 @@ watchEffect(async () => {
   <RouterView :about="about" :blogs="blogs"/>
   <footer>
     <div class="footer-content">
-      <div> 
+      <div>
         <a href="https://linkedin.com/in/marisa-susan-li" class="footer-link">
           <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
-        </a> 
+        </a>
         <a href="https://github.com/marisasusanli" class="footer-link">
           <font-awesome-icon :icon="['fab', 'github']" size="2x" />
-        </a> 
+        </a>
         <a href="mailto:marisa.susan.li@gmail.com" class="footer-link">
           <font-awesome-icon :icon="['fas', 'envelope']" size="2x" />
-        </a> 
+        </a>
       </div>
       <p>© {{ new Date().getFullYear() }} Marisa Li </p>
     </div>
@@ -94,8 +94,8 @@ header {
   max-width: 1280px;
   margin: auto;
   display: flex;
-    justify-content: space-between;
-    align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -106,8 +106,8 @@ nav {
 .nav-link {
   color: #7b6706;
   text-decoration: none;
-  padding: .5rem 1rem;
-  margin: 1rem 1rem 1rem 0;
+  padding: .25rem 0.5rem;
+  margin: .5rem;
   display: inline-block;
   text-transform: lowercase;
 }
@@ -149,6 +149,7 @@ footer {
     align-items: center;
   }
   .nav-link {
+    padding: .5rem 1rem;
     margin: 0 .5rem;
   }
 }
