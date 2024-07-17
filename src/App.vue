@@ -47,7 +47,7 @@ watchEffect(async () => {
       response.json()
     );
     about.value = response.data?.aboutMeCollection?.items;
-    blogs.value = response.data?.blogsCollection?.items?.map((blog) => { return {...blog, readMore: false}});
+    blogs.value = response.data?.blogsCollection?.items?.map((blog) => {return {...blog, readMore: false}})?.sort((a, b) => new Date(b.sys?.firstPublishedAt) - new Date(a.sys?.firstPublishedAt));
   } catch (error) {
     throw new Error("Error retrieving data from Contentful");
   }
